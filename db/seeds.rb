@@ -15,5 +15,5 @@
 end
 
 15.times do
-  Comment.create(user_id: rand(1..5), post_id: rand(1..25), title: Faker::Lorem.sentence(1))
+  Comment.create(user_id: User.all.sample.id, post_id: Post.all.sample.id, title: Faker::Lorem.sentence(1))
 end
